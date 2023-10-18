@@ -1,0 +1,144 @@
+/* S-tell */
+
+body {
+  width: 840px;
+  max-width: 92%;
+  margin: 4px auto 16px;
+  background-color: #f6f9f9;
+  color: #036;
+  font-size: 15px;
+  font-family: Tahoma, sans-serif;
+}
+header {
+  text-align: center;
+}
+svg {
+  display: inline;
+  width: 50px;
+  height: 50px;
+  margin: 0px 20px;
+  vertical-align: middle;
+  border-radius: 8px;
+}
+h1 {
+  display: inline-block;
+  vertical-align: middle;
+  text-align: left;
+  font-size: 32px;
+  margin: 0px;
+}
+h1#nick {
+  color: #09c;
+  font-size: 24px;
+}
+header span {
+  display: none; 
+  vertical-align: middle;
+  font-size: 32px;
+  margin-left: 16px;
+  cursor: pointer;
+}
+aside {
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  opacity: 0.9;
+}
+aside svg {
+  position: fixed;
+  top: calc(50% - 32px);
+  left: calc(50% - 32px);
+}
+main {
+  display: none;
+}
+div {
+  width: 100%;
+  text-align: center;
+  margin-top: 8px;
+}
+select, textarea, input {
+  display: inline-block;
+  background-color: white;
+  font-family: Tahoma, sans-serif;
+  font-size: 16px;
+  border: 1px solid #036;
+  border-radius: 4px;
+  padding: 4px;
+  vertical-align: middle;
+  outline: none;
+}
+select {
+  height: 128px;
+  width: 105px;
+  margin-right: 5px;
+}
+textarea {
+  height: 120px;
+  width: calc(100% - 130px);
+  resize: none;  
+}
+section {
+  width: 97%;
+  height: calc(100vh - 244px);
+  margin-top: 12px;
+  overflow-y: auto;
+  padding-right: 12px;
+}
+article {
+  text-align: center;
+  margin-top: 48px;
+}
+input {
+  width: calc(100% - 130px);
+  padding: 4px;
+  font-size: 16px;
+  vertical-align: middle;
+}
+output {
+  display: none;
+  color: red;
+  margin-top: 24px;
+  text-align: center;
+  font-size: 18px;
+}
+button {
+  background-color: #036;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+button#sgn {
+  width: 100px;
+  vertical-align: middle;
+}
+main button {
+  float: right;
+  margin: 4px 8px 0px 0px;
+}
+h2 {
+  font-size: 16px;
+  margin: 12px 0px 4px;
+}
+h2 span:first-child, h2 span:nth-child(2) {
+  color:#09c;
+}
+h2 span:first-child {
+  font-weight: normal;
+}
+.own {
+  color: gray; 
+}
+p {
+  margin: 3px 0px;
+  text-indent: 1em;
+}

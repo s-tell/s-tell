@@ -1,0 +1,39 @@
+<!DOCTYPE html><html lang="ru">
+<!--
+  S-tell: приватный http-мессенджер
+  MIT License / Copyright © Вадим Тарасов, 2023
+  https://s-tell.github.io
+  https://github.com/s-tell/s-tell
+-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml;base64,{{svg}}">
+  <title>S-tell</title>
+</head>
+<body>
+<header>
+  <h1>S-tell</h1>{{svg}}<h1 id="nick">Вход</h1>
+  <span onclick="get()" title="Обновить">&#128260;</span>
+</header>
+<aside>{{preloader}}</aside>
+<article>
+  <input placeholder="Приватный ключ" autofocus>
+  <button id="sgn" type="button" onclick="signin()">Войти</button>
+</article>
+<output></output>
+<main>
+  <section></section>
+  <div>
+  <select multiple
+    onclick="elem('textarea').value += event.target.text + ', '">
+  </select>
+  <textarea placeholder="Введите текст сообщения"
+    onKeyDown="if (event.keyCode==13 && event.ctrlKey) send()"
+  ></textarea></div>
+  <button onclick="send()">Отправить (Ctrl–Enter)</button>
+</main>
+<script src="nacl.js"></script><script src="lib.js"></script>
+</body>
+</html>

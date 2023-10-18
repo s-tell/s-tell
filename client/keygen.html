@@ -1,0 +1,23 @@
+<!DOCTYPE html><html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body{width:min-content;margin:40px auto;font-size:16px}
+    span{color:red}
+  </style>
+</head>
+<body>
+<script src="nacl.js"></script>
+<script src="lib.js"></script>
+<script>
+const p = nacl.box.keyPair(),
+   priv = to_b58(p.secretKey),
+    pub = to_b58(p.publicKey);
+
+document.body.innerHTML =
+    `<pre><b>Публичный ключ</b>\n${pub}\n\n`
+  + `<b>Приватный ключ</b>\n<span>${priv}</span>\n\n`
+  + `<b>Ник</b>\n${nickGen(pub)}</pre>`;
+
+</script>
+</body></html>
